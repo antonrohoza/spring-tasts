@@ -6,7 +6,6 @@
 	   					   http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="lab2.practice"/>
-    <context:property-placeholder location="classpath:application.properties"/>
 
     <bean id="printer1" class="lab2.practice.MessagePrinter">
         <property name="message" value="${login}"/>
@@ -20,4 +19,7 @@
         <property name="message" value="${url}"/>
     </bean>
 
+    <bean id="messagePrinter" class="lab2.practice.UpdatedMessagePrinter"/>
+
+    <bean id="propertyPlaceHolder" class="lab2.practice.PropertyPlaceholder"/>
 </beans>
